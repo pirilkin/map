@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+<div id="Layer10" style="position:absolute;text-align:left;left:170px;top:20px;width:558px;height:58px;z-index:35;">
+<div id="wb_Text12" style="position:absolute;left:24px;top:15px;width:515px;height:24px;z-index:17;text-align:left;">
+<span style="color:#DCDCDC;font-family:Arial;font-size:21px;">Купи себе понравившуюся карту или закажи свою !</span></div>
+</div>
+
+    <!-- Копировать от сюда -->
+
+    <style type="text/css">
+        .main_contaiter{
+            display: flex;
+            width: 100%;
+            height:100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .map-img-block{
+
+            /* Для изменения ширины карты введите соответсвующее значение */
+            width:30%;
+        
+            /* Для изменения ширины рамки задайте нужное значение */
+            border:30px solid;
+
+            /* Для изменения изображения рамки - измените путь и выставите значение равное ширине рамки в пикселях*/
+            border-image: url('border-img.jpg') 59;            
+        }
+        .unchanging_img{
+            width:100%; 
+        }
+        .changing_img{
+            position: absolute;
+            transition:width 0.3s ease;
+        }   
+    </style>
+    
+    <div class="main_contaiter">
+
+         <!-- Для изменения изображения - измените путь -->
+        <img src="map-1.jpg" class = 'changing_img' alt="Карта" onclick="Show_block()"> 
+
+        <div class="map-img-block">
+
+            <!-- Для изменения изображения - измените путь -->
+            <img src="map-1.jpg" class = 'unchanging_img' alt="Карта">
+
+        </div>
+    </div>
+        
+    <!-- Скрипт нажания на изображение -->
+    
+    <script type="text/javascript">
+        map_img_ch = document.querySelector('.changing_img')
+        map_img_unch = document.querySelector('.unchanging_img')
+        map_img_ch.style.width = map_img_unch.offsetWidth + 'px'
+        is_clicked = false
+        function Show_block(){
+            if(is_clicked){
+                map_img_ch.style.width = map_img_unch.offsetWidth + 'px'
+                map_img_ch.style.transform = 'translate(0,0)';
+                map_img_ch.style.top = 'auto';
+                map_img_ch.style.position = 'absolute'
+                is_clicked = false
+            }else{
+                // Изменить ширину картинки при открытии
+                map_img_ch.style.width = '60%'
+
+                map_img_ch.style.transform = 'translate(0,-50%)';
+                map_img_ch.style.top = '50%';
+                map_img_ch.style.position = 'fixed'
+                is_clicked = true
+            }
+        }
+    </script>
+
+    <!-- Конец  -->
+
+
+
+</body>
+</html>

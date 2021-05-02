@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="hortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./libs/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./libs/css/bootstrap-grid.min.css">
+    <!-- <link href="libs/css/font-awesome.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-4 header-cube">
+                    <!-- куб -->
+                    <div class="stage" style="width: 60px; height: 60px;"
+                        onclick="window.open('http://history-klio.ru/navigation/index.html', 'newWindow', 'menubar=false,location=false,resizable=false,scrollbars=false,width=800,height=600,top=0,left=0');"
+                        id="forcube-left">
+                        <div class="cubespinner">
+                            <div class="face1"></div>
+                            <div class="face2"></div>
+                            <div class="face3"></div>
+                            <div class="face4"></div>
+                            <div class="face5"></div>
+                            <div class="face6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-9 col-md-8 col-sm-8 col-8 header-images">
+                    <ul class="header-list">
+                        <!-- шапка с факелами и картинкой -->
+                        <li class="header-list__item"><img classclass="header-img" src="./img/fire001.gif" alt=""></li>
+                        <li class="header-list__item">
+                            <a href="https://history-klio.ru/"><img class="header-img" src="./img/obzor-hover.jpg" title="history-klio.ru"
+                                    alt="history-klio.ru"></a>
+                        </li>
+                        <li class="header-list__item"><img classclass="header-img" src="./img/fire001.gif" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+    <section class="map">
+        <!-- заголовок -->
+        <h1 class="map-title">карта Италии</h1>
+        <!-- подзаголовок -->
+        <h2 class="map-subtitle">Краткое описание
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab debitis ducimus voluptas corrupti ex
+            repudiandae unde vero explicabo quod sint? Maxime cum ipsam deserunt sapiente?
+             Lorem ipsum dolor sit amet.lorem50 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquam adipisci dignissimos incidunt nostrum, iusto nulla necessitatibus? Tempore eum officia ea asperiores vel cum perferendis ut maiores minus ipsa eius sapiente, temporibus, similique molestias mollitia error veritatis nam a totam iste quia nihil beatae. Nesciunt natus consectetur veniam excepturi harum.
+        </h2>
+        <!-- какой-то текст -->
+        <div class="map-text">
+            <p class="map-text__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dicta assumenda quisquam id
+                voluptatibus
+                ea necessitatibus asperiores ipsum similique ab, quam error obcaecati quos hic officiis nam eum,
+                reprehenderit eos!
+            </p>
+        </div>
+        <!-- горизотальное разделение -->
+        <div class="line" style="height: 5px; background: #fff; width: 100%;"></div>
+
+        <div class="main_contaiter">
+            <!-- Для изменения изображения - измените путь -->
+            <img src="./img/map-1.jpg" class="changing_img" alt="Карта" onclick="Show_block()" style="width: 374px;">
+            <div class="map-img-block">
+                <!-- Для изменения изображения - измените путь -->
+                <img src="./img/map-1.jpg" class="unchanging_img" alt="Карта">
+            </div>
+        </div>
+
+
+        <div class="map-text">
+            <!-- текст с ползунком -->
+            <p class="map-text__item" style="overflow-y: scroll ; width:100%; height:200px;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam laudantium non, quasi, praesentium
+                sapiente rem maxime atque, alias rerum ipsum delectus ducimus? Autem eos sit sunt rerum placeat
+                excepturi ipsum aliquid, animi optio natus! Corrupti officia mollitia pariatur iusto ducimus voluptates
+                perferendis asperiores maiores laborum ipsa, est doloremque velit animi accusamus sequi quas. Nemo,
+                error dicta? Magnam veritatis totam sed. Pariatur, libero ipsum rem consequatur maiores ducimus
+                explicabo, expedita animi atque commodi ea incidunt hic magnam architecto tempora error tenetur neque
+                repellendus! Aperiam delectus quia ducimus reprehenderit perspiciatis, exercitationem dolore in
+                veritatis tenetur? Magnam doloremque vero similique impedit quod perspiciatis quidem culpa, ducimus
+                quam. Voluptatum quaerat nesciunt atque nihil molestias commodi impedit, corporis quod nisi provident
+                iusto reprehenderit voluptatibus amet vitae sit soluta beatae blanditiis quae quasi repellat iste sed
+                officiis aliquid? Ipsum animi minus repellat perspiciatis maiores ducimus obcaecati magnam, at delectus
+                molestiae ullam saepe voluptate vitae rem nihil quam possimus temporibus! Soluta, dicta. Autem hic natus
+                quibusdam voluptates maxime minus, dolorum, similique officia, delectus tempore explicabo. Reprehenderit
+                non qui id? Ad maiores ipsam neque iure commodi asperiores alias cupiditate atque, impedit dolores
+                eveniet rerum perferendis in hic ipsum, quas sequi quibusdam veniam, repudiandae modi praesentium
+                doloremque officia iusto! Debitis error reprehenderit fuga optio tempora assumenda unde sit fugiat
+                voluptates eum placeat veritatis corporis possimus velit voluptatem ad, consequuntur impedit sequi! Nam
+                dolores neque aliquid voluptas vitae doloribus ipsum et qui natus, facilis mollitia enim corporis, eum
+                distinctio! Expedita, et odit unde voluptas quam ea magnam veniam possimus ad totam rerum assumenda
+                temporibus nam laboriosam aperiam similique repellat in! In dolor ullam corrupti blanditiis tempora
+                officiis voluptatem eum necessitatibus distinctio unde quo, labore quidem, nihil sit ea maxime cum. Quod
+                doloremque id expedita blanditiis alias. Architecto iure, natus harum delectus laborum nisi dolorum
+                alias beatae est, vel quasi rerum!
+            </p>
+        </div>
+        <!-- горизотальное разделение -->
+        <div class="line" style="height: 5px; background: #fff; width: 100%;"></div>
+        <!-- какой-то текст -->
+        <div class="map-text">
+            <p class="map-text__item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dicta assumenda quisquam id
+                voluptatibus
+                ea necessitatibus asperiores ipsum similique ab, quam error obcaecati quos hic officiis nam eum,
+                reprehenderit eos!
+            </p>
+        </div>
+    </section>
+    <!-- футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 footer-block footer-social">
+                    <h3>Свяжитесь с нами</h3>
+                    <!-- ссылки на соц сети -->
+                    <ul class="footer-list">
+                        <li class="footer-list__item">
+                            <a class="i-vkontakte" title="ВКонтакте"
+                                href="https://vk.com/share.php?url=https://history-klio.ru/chronology.html&amp;title=Династии, генеалогии. хронологии правлений"
+                                rel="nofollow noopener" target="_blank">
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a class="i-facebook" title="Facebook"
+                                href="https://www.facebook.com/sharer.php?src=sp&amp;u=https://history-klio.ru/&amp;title=Династии, генеалогии. хронологии правлений"
+                                rel="nofollow noopener" target="_blank">
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a class="i-ok" title="Одноклассники"
+                                href="https://connect.ok.ru/offer?url=https://history-klio.ru/&amp;title=Династии, генеалогии. хронологии правлений"
+                                rel="nofollow noopener" target="_blank">
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a class="i-whatsapp" title="WhatsApp"
+                                href="https://api.whatsapp.com/send?text=Династии, генеалогии. хронологии правлений%20https://history-klio.ru/"
+                                rel="nofollow noopener" target="_blank">
+                            </a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a class="i-telegram" title="Telegram"
+                                href="tg://msg_url?url=https://history-klio.ru/&amp;text=Династии, генеалогии. хронологии правлений"
+                                rel="nofollow" target="_blank">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- текст копирайтю -->
+                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-4 footer-block ">
+                    <p class="footer-copyright">© history-klio.ru 2015–2020</p>
+                    <p class="footer-copyright">Использование материалов сайта без согласия <a class="footer-author"
+                            href="mailto:veresk22@yahoo.com">автора</a>
+                        запрещено</p>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 footer-block">
+                    <!-- кнопка вызова формы обратной связи -->
+                    <div class="callback footer-callback">
+                        <img src="./img/callback.png" alt="" onclick="openForm()" class="footer-callback-img">
+                    </div>
+                    <!-- стрелка вверх -->
+                    <div id="to-top">
+                        <div id="top" class="arrow a"></div>
+                    </div>
+                    <!-- попап форма -->
+                    <div class="form-popup" id="myForm" style="">
+                        <h5 class="form-popup__title">Свяжитесь со мной!</h5>
+                        <div class="form-popup__links">
+                            <!-- Ссылки для связи -->
+                            <!-- ВК -->
+                            <a class="form-popup__link" href="https://vk.com/im?media=&amp;sel=-27698135" target="_blank">
+                                <img class="form-popup__img" src="./img/cl_vk.png" alt="">
+                            </a>
+                            <!-- ТГ -->
+                            <a class="form-popup__link" href="https://t.me/Veresk22" target="_blank">
+                                <img class="form-popup__img" src="./img/cb_teleg.png" alt="">
+                            </a>
+                        </div>
+                        <!-- кнопка закрытия формы обратной связи -->
+                        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
