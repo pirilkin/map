@@ -1,0 +1,13 @@
+.autoweel {
+    margin: 25px auto 100px;
+    @include media($md){
+        margin-bottom: 150px;
+    }
+    @include media($sm) {
+        margin-bottom: 15px;
+    }
+
+    &-content {
+        color: white;
+    }
+}
