@@ -61,6 +61,8 @@ $('.about-slider').slick({
   autoplay: true,
   prevArrow: '<div class="about-slider__prev"><img src="./img/arrow_1.svg" alt=""></div>',
   nextArrow: '<div class="about-slider__next"><img src="./img/arrow_2.svg" alt=""></div>',
+  // centerMode: true,
+  // centerPadding: '60px',
   responsive: [
       {
           breakpoint: 1199.98,
