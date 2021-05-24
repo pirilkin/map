@@ -26,12 +26,13 @@ body {
 .map-img-block {
     /* Для изменения ширины карты введите соответсвующее значение */
     width: 30%;
-
+    overflow: hidden;
+    
     /* Для изменения ширины рамки задайте нужное значение */
-    border: 30px solid;
+    border: 20px solid;
 
     /* Для изменения изображения рамки - измените путь и выставите значение равное ширине рамки в пикселях*/
-    border-image: url('../img/border-img.jpg') 59;
+    border-image: url('../img/border-img.jpg') 60;
 }
 
 .map-text {
@@ -473,3 +474,4 @@ section{
 @import './images.scss';
 @import './parallax.scss';
 @import './autoweel.scss';
+@import './slider.scss';

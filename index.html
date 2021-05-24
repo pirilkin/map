@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="./libs/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./libs/css/bootstrap-grid.min.css">
     <link href="libs/css/liMarquee.css" rel="stylesheet">
+    <link href="libs/css/slick.css" rel="stylesheet">
+    <link href="libs/css/jquery.fancybox.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- в body задается шрифт на весь документ и цвет общего фона  -->
 
 <body style="background: #000; font-family: 'Arial';">
     <!-- в header можно задать цвет его фона отдельно если задавать картинкой то background: url('./img/название картинки'); background-size: cover;   background-position: center center;-->
-    
+
     <!-- чтобы добавить отступ после какого либо блока (желательно добавлять к header, section, footer (но не  обязательно ! вообще можно ставить куда угодно для отступа))в нашем случае к header просто добавить margin-bottom: ... и значение -->
-    
+
     <header class="header" style="background: #000; margin-bottom: 25px;">
         <div class="container">
             <div class="row">
@@ -338,18 +340,32 @@
         </div>
         <!--в "main_contaiter" также можно указать background: #000; либо вставить картинку через background:url... (подробнее описал в header) -->
         <div class="main_contaiter" style="">
+            <!-- бывшее изображение -->
             <!-- Для изменения изображения - измените путь -->
-            <img src="./img/map-1.jpg" class="changing_img" alt="Карта" onclick="Show_block()" style="width: 374px;">
+            <!-- <img src="./img/map-1.jpg" class="changing_img" alt="Карта" onclick="Show_block()" style="width: 374px;"> -->
+            <!-- <div class="map-img-block"> -->
+            <!-- Для изменения изображения - измените путь -->
+            <!-- <img src="./img/map-1.jpg" class="unchanging_img" alt="Карта"> -->
+            <!-- </div> -->
             <div class="map-img-block">
-                <!-- Для изменения изображения - измените путь -->
-                <img src="./img/map-1.jpg" class="unchanging_img" alt="Карта">
+                <!-- data-caption="Caption 0 для одного изображения" - это подпись для фотографии при полном раскрытии -->
+                <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                <a data-fancybox="image" href="./img/map-1.jpg" class="about-slider__item">
+                    <!-- src= это путь к картинке которая увеличивается -->
+                    <img class="about-slider__img" src="./img/map-1.jpg" alt="">
+                </a>
             </div>
         </div>
+
 
         <!-- горизотальное разделение -->
         <div class="line-container">
             <img src="./img/line.png" alt="" style="width: 50%;">
         </div>
+    </section>
+
+    <!-- секция с текстом с ползунком без автоматической прокрутки -->
+    <section>
         <!-- для выделения всего блока "map-text" текстка с прокруткой по всей длине необходимо задать background="цвет"   -->
         <div class="map-text" style="margin: 20px auto;">
             <!-- текст с ползунком -->
@@ -392,11 +408,10 @@
             </p>
         </div>
     </section>
-    
     <!-- секция автопрокрутки -->
     <!-- для удаления "блока" необходимо прописать в style= "display: none" чтобы вернуть просто удалить display: none -->
     <section class="autoweel str3-2 str_wrap"
-        style="overflow-y: scroll; position: relative; font-size: 25px;height: 200px; max-width: 992px;">
+        style="position: relative; font-size: 25px;height: 200px; max-width: 992px;">
         <span class="autoweel-content" style="font-family: Arial;font-size: 12px; line-height: 14px;">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dicta vel voluptatem reiciendis totam
             soluta natus dolore ipsum reprehenderit delectus, dolorem accusamus, quis corporis ab error iure nesciunt
@@ -416,6 +431,112 @@
         </span>
     </section>
     
+    <!-- секция слайдера с lightbox -->
+    <section class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <!-- начало самого слайдера -->
+                    <div class="about-slider">
+                        
+                        <!-- чтобы увеличить количество картинок в слайдере нужно полностью дублировать  весь <div class="about-slider__item"> -->
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1936ispan.jpg" data-caption="Caption -1 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1936ispan.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text">1936-1939 гражданская война в Испании</p>
+                            </div>
+                        </div>
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1939-40.jpg" data-caption="Caption -1 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1939-40.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text">1939г. Начало 2й мировой войны. Вторжение в Польшу</p>
+                            </div>
+                        </div>
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1940.jpg" data-caption="Caption -1 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1940.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text"> 2-я мировая война. Европа. 1939-первая половина 1941</p>
+                            </div>
+                        </div>
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1944.jpg" data-caption="Caption 3 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1944.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text">2-ая мировая война. Военные действия в средиземноморье 1940-1941 годы</p>
+                            </div>
+                        </div>
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1944.jpg" data-caption="Caption -1 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1944.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text">2-ая мировая война. Военные действия в средиземноморье 1940-1941 годы</p>
+                            </div>
+                        </div>
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1944.jpg" data-caption="Caption 4 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1944.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text">1936-1939 гражданская война в Испании</p>
+                            </div>
+                        </div>
+                        <div class="about-slider__item">
+                            <!-- data-caption="Caption 0 для одного изображения" подпись для фотографии при полном раскрытии -->
+                            
+                            <!-- href= это путь к картинке которая увеличивается (сюда можно указать полно размерную картинку а ниже в  <img class="about-slider__img" src="указать полноразмерную картинку") -->
+                            <a data-fancybox="img" href="./img/1944.jpg" data-caption="Caption 5 для одного изображения" class="about-slider__item">
+                                <!-- src= это путь к картинке которая увеличивается -->
+                                <img class="about-slider__img" src="./img/1944.jpg" alt="">
+                            </a>
+                            <div class="about-slider__title">
+                                <!-- подпись под картинкой до того как нажали на картинку в слайдере -->
+                                <p class="about-slider__text">1936-1939 гражданская война в Испании</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- футер -->
     <!-- в footer можно задавать отступы снизу/сверху а также отдельный фон background: #000;-->
     <!--в footer также можно указать background: #000; либо вставить картинку через background:url... (подробнее описал в header) -->
@@ -498,6 +619,8 @@
     </footer>
     <script src="./libs/js/jquery.min.js"></script>
     <script src="./libs/js/jquery.liMarquee.js"></script>
+    <script src="./libs/js/slick.js"></script>
+    <script src="./libs/js/jquery.fancybox.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

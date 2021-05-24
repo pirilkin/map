@@ -414,11 +414,12 @@ body {
 .map-img-block {
   /* Для изменения ширины карты введите соответсвующее значение */
   width: 30%;
+  overflow: hidden;
   /* Для изменения ширины рамки задайте нужное значение */
-  border: 30px solid;
+  border: 20px solid;
   /* Для изменения изображения рамки - измените путь и выставите значение равное ширине рамки в пикселях*/
-  -o-border-image: url("../img/border-img.jpg") 59;
-  border-image: url("../img/border-img.jpg") 59;
+  -o-border-image: url("../img/border-img.jpg") 60;
+  border-image: url("../img/border-img.jpg") 60;
 }
 
 .map-text {
@@ -963,6 +964,74 @@ a {
 
 .autoweel-content {
   color: white;
+}
+
+.about-slider {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.about-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-height: 250px;
+}
+
+.about-slider__img {
+  max-height: 250px;
+}
+
+.about-slider__title {
+  padding: 25px 10%;
+}
+
+.about-slider__text {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.about-slider__prev,
+.about-slider__next {
+  background-color: none;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  -webkit-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  height: 87%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.about-slider__prev img,
+.about-slider__next img {
+  width: 50%;
+}
+
+.about-slider__prev {
+  left: 0;
+}
+
+.about-slider__next {
+  right: 0;
 }
 
 @media (max-width: 960px) {
