@@ -1129,4 +1129,11 @@ a {
   .autoweel {
     margin-bottom: 15px;
   }
+
+  .about-slider__prev,
+  .about-slider__next {
+    width: 35px;
+    top: 30%;
+    height: 50px;
+  }
 }

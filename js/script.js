@@ -80,6 +80,18 @@ $('.about-slider').slick({
           slidesToShow: 1,
         }
       },
+      {
+          breakpoint: 370,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+          breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
      
   ]
 

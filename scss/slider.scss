@@ -39,6 +39,11 @@
             // border: 1px solid red;
             background: rgba(black, 0.5);
             z-index: 99;
+            @include media($sm){
+                width: 35px;
+                top: 30%;
+                height: 50px;
+            }
             img{
                 width: 50%;
             }
